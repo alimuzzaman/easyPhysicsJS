@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { Lesson1Component } from './lessons/lesson1/lesson1.component';
 import { Lesson2Component } from './lessons/lesson2/lesson2.component';
+import { CanvasComponent } from './lessons/canvas.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Lesson2Component } from './lessons/lesson2/lesson2.component';
     AboutComponent,
     LessonsComponent,
     Lesson1Component,
-    Lesson2Component
+    Lesson2Component,
+    CanvasComponent
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,167 @@
+#canvas{
+    position: relative;
+}
+
+.boxed{
+    padding: 30px;
+    margin-top: 30px;
+}
+
+#football{
+    z-index: 99;
+}
+
+.hr-text {
+    line-height: 1em;
+    position: absolute;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    opacity: .3;
+}
+.hr-text:before {
+    content: '';
+    background: #818078;
+    position: absolute;
+}
+.hr-text:after {
+    content: attr(data-content);
+    position: absolute;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+}
+
+.hr-text.top {
+    top: -0.75em;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
+}
+.hr-text.top:before {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text.top:after {
+    transform: translate(-50%);
+}
+
+.hr-text.bottom {
+    bottom: -0.75em;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
+}
+.hr-text.bottom:before {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text.bottom:after {
+    transform: translate(-50%);
+}
+
+.hr-text.left {
+    top: 0;
+    left: -0.75em;
+    width: 1.5em;
+    height: 100%;
+}
+.hr-text.left:before {
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+.hr-text.left:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hr-text.right {
+    top: 0;
+    right: -0.75em;
+    width: 1.5em;
+    height: 100%;
+}
+.hr-text.right:before {
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+.hr-text.right:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.hr-text.x {
+    top: 50%;
+    width: 50%;
+    height: 1.5em;
+    z-index: -1;
+}
+.hr-text.x:before {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+}
+.hr-text.x:after {
+    transform: translate(-50%);
+}
+
+.hr-text.x-left {
+    left: 0;
+    transform: translate(0%, -50%);
+}
+.hr-text.x-right {
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+
+
+
+.hr-text.y {
+    top: 0;
+    left: 50%;
+    height: 50%;
+    z-index: -1;
+}
+.hr-text.y:before {
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+.hr-text.y:after {
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, -50%);
+}
+
+.hr-text.y-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.hr-text.y-top:after {
+}
+.hr-text.y-bottom {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+
+

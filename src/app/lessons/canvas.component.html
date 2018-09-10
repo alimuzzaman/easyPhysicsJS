@@ -1,0 +1,16 @@
+<div id="canvas" class="boxed container" [ngStyle]="canvas">
+
+
+  <div class="hr-text top" [attr.data-content]="canvas.width"></div>
+  <div class="hr-text left" [attr.data-content]="canvas.height"></div>
+  <div class="hr-text bottom" [attr.data-content]="canvas.width"></div>
+  <div class="hr-text right" [attr.data-content]="canvas.height"></div>
+
+  <div class="hr-text x x-left" [attr.data-content]="'-X'"></div>
+  <div class="hr-text x x-right" [attr.data-content]="'X'"></div>
+  <div class="hr-text y y-top" [attr.data-content]="'Y'"></div>
+  <div class="hr-text y y-bottom" [attr.data-content]="'-Y'"></div>
+
+
+  <ng-content></ng-content>  
+</div>
