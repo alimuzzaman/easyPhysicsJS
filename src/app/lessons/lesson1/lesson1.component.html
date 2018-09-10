@@ -1,0 +1,26 @@
+<div id="canvas" class="boxed container" [ngStyle]="canvas">
+
+
+  <div class="hr-text top" [attr.data-content]="canvas.width"></div>
+  <div class="hr-text left" [attr.data-content]="canvas.height"></div>
+  <div class="hr-text bottom" [attr.data-content]="canvas.width"></div>
+  <div class="hr-text right" [attr.data-content]="canvas.height"></div>
+
+  <div class="hr-text x x-left" [attr.data-content]="'-X'"></div>
+  <div class="hr-text x x-right" [attr.data-content]="'X'"></div>
+  <div class="hr-text y y-top" [attr.data-content]="'Y'"></div>
+  <div class="hr-text y y-bottom" [attr.data-content]="'-Y'"></div>
+
+
+  <img id="football" src="assets/football.svg" [ngStyle]="footballStyle">
+  
+</div>
+<br />
+<div class="boxed container text-center">
+  <button (click)="reset()">Reset</button>
+  <button (click)="simulate()">Simulate</button>
+  <label >
+    <input type="text" value="{{canvasSize}}" [(ngModel)]="canvasSize">
+
+  </label>
+</div>
