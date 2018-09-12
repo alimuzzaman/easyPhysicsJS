@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import anime from 'animejs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-lesson1',
@@ -14,16 +15,8 @@ export class Lesson1Component implements OnInit {
     height: '400px',
     padding: '0px',
   }
-  public footballStyle = {
-    position: 'absolute',
-    top: '50%',
-    left: '0px',
-    width: '64px',
-    height: '64px',
-    transform: 'translateY(-50%)',
 
-  }
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   simulate(){
     var cssProperties = anime({
@@ -34,12 +27,12 @@ export class Lesson1Component implements OnInit {
     });
   }
 
+
   reset(){
-    var cssProperties = anime({
-      targets: '#football',
-      easing: 'linear',
-      translateX: 0,
-      translateY: '-50%',
+    let _this = this;
+    let url: string = this.router.url.toString();
+    this.router.navigate(['lessons.ts']).then(function(){
+      _this.router.navigate([url]);
     });
   }
 

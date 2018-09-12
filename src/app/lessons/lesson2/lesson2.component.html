@@ -1,3 +1,13 @@
-<p>
-  lesson2 works!
-</p>
+<app-canvas [canvas]="canvas">
+  <img id="football" src="assets/football.svg" [ngStyle]="footballStyle">
+
+</app-canvas>
+<br />
+<div class="boxed container text-center">
+  <button (click)="reset()">Reset</button>
+  <button (click)="simulate()">Simulate</button>
+  <label >
+    <input type="text" value="{{canvasSize}}" [(ngModel)]="canvasSize">
+
+  </label>
+</div>
