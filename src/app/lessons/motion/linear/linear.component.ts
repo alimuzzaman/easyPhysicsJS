@@ -3,11 +3,11 @@ import anime from 'animejs';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-lesson1',
-  templateUrl: './lesson1.component.html',
-  styleUrls: ['./lesson1.component.css']
+  selector: 'app-linear',
+  templateUrl: './linear.component.html',
+  styleUrls: ['./linear.component.css']
 })
-export class Lesson1Component implements OnInit {
+export class MotionLinearComponent implements OnInit {
   public cssProperties;
   public distance: number = 600;
   public velocity: number = 200;

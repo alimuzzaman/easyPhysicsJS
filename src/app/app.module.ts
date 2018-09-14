@@ -7,10 +7,12 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LessonsComponent } from './lessons/lessons.component';
-import { Lesson1Component } from './lessons/lesson1/lesson1.component';
+import { MotionLinearComponent } from './lessons/motion/linear/linear.component';
 import { Lesson2Component } from './lessons/lesson2/lesson2.component';
 import { CanvasComponent } from './lessons/canvas.component';
-import { CircleVelocityComponent } from './lessons/circle-velocity/circle-velocity.component';
+import { MotionRotaryComponent } from "./lessons/motion/rotary/rotary.component";
+import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocating/motion-reciprocating.component';
+import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { CircleVelocityComponent } from './lessons/circle-velocity/circle-veloci
     HomeComponent,
     AboutComponent,
     LessonsComponent,
-    Lesson1Component,
+    MotionLinearComponent,
     Lesson2Component,
     CanvasComponent,
-    CircleVelocityComponent
+    MotionRotaryComponent,
+    MotionReciprocatingComponent,
+    MotionOscillatingComponent
   ],
   imports: [
     FormsModule,

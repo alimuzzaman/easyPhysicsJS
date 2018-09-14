@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import anime from 'animejs';
 
 @Component({
-  selector: 'app-circle-velocity',
-  templateUrl: './circle-velocity.component.html',
-  styleUrls: ['./circle-velocity.component.css']
+  selector: 'app-rotary',
+  templateUrl: './rotary.component.html',
+  styleUrls: ['./rotary.component.css']
 })
-export class CircleVelocityComponent implements OnInit {
+export class MotionRotaryComponent implements OnInit {
   public radius: number = 150;
   public velocity: number = 100;
   public time: number;

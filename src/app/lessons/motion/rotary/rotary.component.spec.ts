@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircleVelocityComponent } from './circle-velocity.component';
+import { MotionRotaryComponent } from "./rotary.Component";
 
-describe('CircleVelocityComponent', () => {
-  let component: CircleVelocityComponent;
-  let fixture: ComponentFixture<CircleVelocityComponent>;
+describe('MotionRotaryComponent', () => {
+  let component: MotionRotaryComponent;
+  let fixture: ComponentFixture<MotionRotaryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CircleVelocityComponent ]
+      declarations: [ MotionRotaryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CircleVelocityComponent);
+    fixture = TestBed.createComponent(MotionRotaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

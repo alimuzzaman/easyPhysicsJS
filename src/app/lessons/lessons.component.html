@@ -1,23 +1,23 @@
-<p>
-  lessons works!
-</p>
-
 <div class="container">
-  <div class="lessons">
-    <ul>
-      <li>
-        Lesson 1
-        <ul>
-          <li><a routerLink="/lesson/lesson1.ts">Linear Velocity</a></li>
-          <li><a routerLink="/lesson/circle-velocity.ts">Circle Velocity</a></li>
-        </ul>
-        
-      </li>
-      <li><a routerLink="/lesson/lesson2.ts">Lesson 2</a></li>
-    </ul>
-  </div>
-  <div class="details">
-    Lesson details
-    <router-outlet></router-outlet>
+  <div class="row">
+    <div class="lessons col-3">
+      <ul class="list-group">
+        <li class="list-group-item">
+          Lesson 1
+          <ul class="list-group">
+            <li class="list-group-item"><a routerLink="/lesson/motion/linear.ts">Linear Motion</a></li>
+            <li class="list-group-item"><a routerLink="/lesson/motion/rotary.ts">Circle Motion</a></li>
+            <li class="list-group-item"><a routerLink="/lesson/motion/reciprocating.ts">Reciprocating Motion</a></li>
+            <li class="list-group-item"><a routerLink="/lesson/motion/oscillating.ts">Oscillating Motion</a></li>
+          </ul>
+          
+        </li>
+        <li class="list-group-item"><a routerLink="/lesson/lesson2.ts">Lesson 2</a></li>
+      </ul>
+    </div>
+    <div class="details col">
+      Lesson details
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
