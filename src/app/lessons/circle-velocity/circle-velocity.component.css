@@ -1,0 +1,14 @@
+#football{
+    position: absolute;
+    /* left: 25%; */
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#rotator{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}

@@ -10,6 +10,7 @@ import { LessonsComponent } from './lessons/lessons.component';
 import { Lesson1Component } from './lessons/lesson1/lesson1.component';
 import { Lesson2Component } from './lessons/lesson2/lesson2.component';
 import { CanvasComponent } from './lessons/canvas.component';
+import { CircleVelocityComponent } from './lessons/circle-velocity/circle-velocity.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CanvasComponent } from './lessons/canvas.component';
     LessonsComponent,
     Lesson1Component,
     Lesson2Component,
-    CanvasComponent
+    CanvasComponent,
+    CircleVelocityComponent
   ],
   imports: [
     FormsModule,

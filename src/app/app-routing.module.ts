@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { LessonsComponent } from './lessons/lessons.component';
 import { Lesson1Component } from './lessons/lesson1/lesson1.component';
 import { Lesson2Component } from './lessons/lesson2/lesson2.component';
+import { CircleVelocityComponent } from './lessons/circle-velocity/circle-velocity.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index.ts', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
       {path: '', redirectTo: 'lesson1.ts', pathMatch: 'full'}, 
       {path: 'lesson1.ts', component: Lesson1Component}, 
       {path: 'lesson2.ts', component: Lesson2Component}, 
+      {path: 'circle-velocity.ts', component: CircleVelocityComponent}, 
     ]
   },
 ];

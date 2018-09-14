@@ -1,0 +1,28 @@
+<app-canvas [canvas]="canvas">
+  <div id="rotator" [ngStyle]='canvas'>
+    <img id="football" class="football" src="assets/football.svg" width="64" height="64" [ngStyle]="football">
+  </div>
+</app-canvas>
+
+<div class="boxed container text-center">
+  <button (click)="reset()">Reset</button>
+  <button (click)="simulate()">Simulate</button>
+  <br />
+  <br />
+  <label >
+    Radius: 
+    <input type="number" [(ngModel)]="radius" max="300">
+  </label>
+  <br />
+  <label >
+    Velocity:
+    <input type="number" [(ngModel)]="velocity">
+    m/s
+  </label>
+  <br />
+  <label >
+    Time:
+    <input type="number" [(ngModel)]="time">
+    s
+  </label>
+</div>

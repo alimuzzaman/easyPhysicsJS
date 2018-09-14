@@ -8,7 +8,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./lesson1.component.css']
 })
 export class Lesson1Component implements OnInit {
-  public canvasSize = 600;
+  public cssProperties;
+  public distance: number = 600;
+  public velocity: number = 200;
+  public time: number;
   public canvas = {
     position: 'relative',
     width: '600px',
@@ -19,21 +22,18 @@ export class Lesson1Component implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   simulate(){
-    var cssProperties = anime({
+    this.time = this.distance / this.velocity;
+    this.cssProperties = anime({
       targets: '#football',
-      translateX: 588,
-      translateY: '-50%',
+      left: this.distance,
       easing: 'linear',
+      duration: this.distance / this.velocity * 1000,
     });
   }
 
 
   reset(){
-    let _this = this;
-    let url: string = this.router.url.toString();
-    this.router.navigate(['lessons.ts']).then(function(){
-      _this.router.navigate([url]);
-    });
+    this.cssProperties.restart().reset();
   }
 
   ngOnInit() {

@@ -7,8 +7,22 @@
 <div class="boxed container text-center">
   <button (click)="reset()">Reset</button>
   <button (click)="simulate()">Simulate</button>
+  <br />
+  <br />
   <label >
-    <input type="text" value="{{canvasSize}}" [(ngModel)]="canvasSize">
-
+    Distance: 
+    <input type="number" value="{{canvasSize}}" [(ngModel)]="distance" max="600">
+  </label>
+  <br />
+  <label >
+    Velocity:
+    <input type="number" value="{{canvasSize}}" [(ngModel)]="velocity">
+    m/s
+  </label>
+  <br />
+  <label >
+    Time:
+    <input type="number" value="{{canvasSize}}" [(ngModel)]="time">
+    s
   </label>
 </div>
