@@ -8,22 +8,24 @@ import { MotionRotaryComponent } from "./lessons/motion/rotary/rotary.component"
 import { Lesson2Component } from './lessons/lesson2/lesson2.component';
 import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocating/motion-reciprocating.component';
 import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
+import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index.ts', pathMatch: 'full' },
   { path: 'index.ts', component: HomeComponent },
   { path: 'about.ts', component: AboutComponent },
   { path: 'lessons.ts', component: LessonsComponent },
+  { path: 'lesson/lesson2.ts', component: Lesson2Component }, 
   {
     path: 'lesson',
     component: LessonsComponent,
     children: [
-      {path: '', redirectTo: 'lesson1.ts', pathMatch: 'full'}, 
-      {path: 'motion/linear.ts', component: MotionLinearComponent}, 
-      {path: 'motion/rotary.ts', component: MotionRotaryComponent}, 
-      {path: 'motion/reciprocating.ts', component: MotionReciprocatingComponent}, 
-      {path: 'motion/lesson2.ts', component: Lesson2Component}, 
-      {path: 'motion/oscillating.ts', component: MotionOscillatingComponent}, 
+      { path: '', redirectTo: 'lesson1.ts', pathMatch: 'full' },
+      { path: 'motion/linear.ts', component: MotionLinearComponent },
+      { path: 'motion/rotary.ts', component: MotionRotaryComponent },
+      { path: 'motion/reciprocating.ts', component: MotionReciprocatingComponent },
+      { path: 'motion/oscillating.ts', component: MotionOscillatingComponent },
+      { path: 'motion/displacement.ts', component: DisplacementComponent },
     ]
   },
 ];

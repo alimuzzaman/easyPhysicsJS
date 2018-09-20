@@ -1,13 +1,13 @@
 import { Component, OnInit, ElementRef, ViewChild, Renderer2, Directive, Input } from '@angular/core';
 import * as Matter from 'matter-js';
 
-
 @Component({
-  selector: 'app-motion-oscillating',
-  templateUrl: './motion-oscillating.component.html',
-  styleUrls: ['./motion-oscillating.component.css']
+  selector: 'app-displacement',
+  templateUrl: './displacement.component.html',
+  styleUrls: ['./displacement.component.css']
 })
-export class MotionOscillatingComponent implements OnInit {
+export class DisplacementComponent implements OnInit {
+
   @ViewChild('matterCanvas') matterCanvas:ElementRef;
   public xyz;
   constructor() { }
@@ -115,5 +115,4 @@ export class MotionOscillatingComponent implements OnInit {
         }
     };
   }
-
 }

@@ -13,6 +13,7 @@ import { CanvasComponent } from './lessons/canvas.component';
 import { MotionRotaryComponent } from "./lessons/motion/rotary/rotary.component";
 import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocating/motion-reciprocating.component';
 import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
+import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/
     CanvasComponent,
     MotionRotaryComponent,
     MotionReciprocatingComponent,
-    MotionOscillatingComponent
+    MotionOscillatingComponent,
+    DisplacementComponent
   ],
   imports: [
     FormsModule,
