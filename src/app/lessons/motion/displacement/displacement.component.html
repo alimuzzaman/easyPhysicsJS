@@ -1,3 +1,45 @@
 <div id="matter-canvas" #matterCanvas></div>
+<br />
+Velocity: {{v.v}}
+<br />
+X: {{v.x}}
+<br />
+<br />
+p: {{v.p | json}}
+<br />
+Time: {{timeEleps}}
+<br />
+eqChanged: {{eqChanged | json}}
+<br />
+<br />
+eqChanged: {{xyz.engine.timing | json}}
+<br />
 <button (click)="stop()">Stop</button>
 <button (click)="start()">Start</button>
+
+<br />
+<br />
+<label for="">
+  Angle:
+  <input type="number" name="" id=""  [(ngModel)]= "angle">
+</label>
+<br />
+<label for="">
+  Initial Velocity:  ({{initialVelocity}})
+  <input type="number" name="" id="" (change)= "ngOnChanges('initialVelocity')"  [(ngModel)]= "initialVelocity">
+</label>
+<br />
+<label for="">
+  Time: ({{time}})
+  <input type="number" name="" id="" (change)= "ngOnChanges('time')" [(ngModel)]= "time">
+</label>
+<br />
+<label for="">
+  Acceleration: ({{acceleration}})
+  <input type="number" name="" id="" (change)= "ngOnChanges('acceleration')"  [(ngModel)]= "acceleration">
+</label>
+<br />
+<label for="">
+  Displacement: ({{displacement}})
+  <input type="number" name="" id="" (change)= "ngOnChanges('displacement')"  [(ngModel)]= "displacement">
+</label>
