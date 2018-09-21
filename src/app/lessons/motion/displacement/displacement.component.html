@@ -1,18 +1,11 @@
-<div id="matter-canvas" #matterCanvas></div>
+<app-canvas [canvas]="canvas">
+  <img id="_football" class="football state1" src="assets/football.svg">
+  <img id="football" class="football" src="assets/football.svg">
+</app-canvas>
+
 <br />
-Velocity: {{v.v}}
+{{eqChanged | json}}
 <br />
-X: {{v.x}}
-<br />
-<br />
-p: {{v.p | json}}
-<br />
-Time: {{timeEleps}}
-<br />
-eqChanged: {{eqChanged | json}}
-<br />
-<br />
-eqChanged: {{xyz.engine.timing | json}}
 <br />
 <button (click)="stop()">Stop</button>
 <button (click)="start()">Start</button>
@@ -31,7 +24,7 @@ eqChanged: {{xyz.engine.timing | json}}
 <br />
 <label for="">
   Time: ({{time}})
-  <input type="number" name="" id="" (change)= "ngOnChanges('time')" [(ngModel)]= "time">
+  <input type="number" name="" id="" (change)= "ngOnChanges('time')" [(ngModel)]= "time" readonly>
 </label>
 <br />
 <label for="">
