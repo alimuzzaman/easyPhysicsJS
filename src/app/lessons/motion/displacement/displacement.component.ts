@@ -14,7 +14,7 @@ export class DisplacementComponent  {
     public canvas = {
         position: 'relative',
         width: '600px',
-        height: '400px',
+        height: '600px',
         padding: '0px',
       }
 
@@ -23,9 +23,9 @@ export class DisplacementComponent  {
 
     public angle = 0;
     public initialVelocity = 0;
-    public time = 7.745966692414834;
+    public time = 5.477225575051661;
     public acceleration = 20;
-    public displacement = 600;
+    public displacement = 300;
 
 
     public v = {};
@@ -48,59 +48,49 @@ export class DisplacementComponent  {
     }
 
     start() {
-        anime.easings['myCustomEasingName'] = (_t) => {
-            var u = this.initialVelocity,
+        anime.easings['myCustomEasingName'] = (_t, x, y, z) => {
+            var r = this.angle,
+                u = this.initialVelocity,
                 t = this.time,
                 a = this.acceleration,
                 s = this.displacement;
             var relativeTime = t * _t;
-            console.log(relativeTime, u * relativeTime + 0.5 * a * relativeTime * relativeTime)
+            console.log(_t, x, y, z)
             return (u * relativeTime + 0.5 * a * relativeTime * relativeTime) / s;
         }
+        var rad = this.angle * Math.PI / 180;
+        var X = Math.cos(rad) * this.displacement + 0;
+        var Y = Math.sin(rad) * this.displacement + 0;
+
         this.cssProperties = anime({
           targets: '#football',
-          left: this.displacement,
+          left: Math.cos(- this.angle * Math.PI / 180) * this.displacement + 300,
+          top: Math.sin(- this.angle * Math.PI / 180) * this.displacement + 300,
           easing: 'myCustomEasingName',
           duration: this.time * 1000,
         });
         
     }
 
-
-
-    ngOnChanges(item: string) {
-        // return;
-        this.calculateValue();
-        if(this.eqChanged.includes(item))
-            return;
-            
-        if (this.eqChanged.length >= 3) {
-            var removed = this.eqChanged.shift();
-        }
-        this.eqChanged.push(item);
-        console.log(this.eqChanged);
-    }
-
-    calculateValue() {
+    calculateValue(removed) {
         var u = this.initialVelocity,
             t = this.time,
             a = this.acceleration,
             s = this.displacement;
-        var removed 
-        switch (true) {
-            case !this.eqChanged.includes('time'):
+        switch (removed) {
+            case 'time':
                 //   t = ?
                 this.time = (-u + Math.sqrt(u * u + 2 * a * s)) / a;
                 break;
-            case !this.eqChanged.includes('initialVelocity'):
+            case 'initialVelocity':
                 // u = ?
                 this.initialVelocity = s / t - 0.5 * a * t;
                 break;
-            case !this.eqChanged.includes('acceleration'):
+            case 'acceleration':
                 //   a = ?
                 this.acceleration = 2 * s / (t * t) - 2 * u / t;
                 break;
-            case !this.eqChanged.includes('displacement'):
+            case 'displacement':
                 //   s = ?
                 this.displacement = u * t + 0.5 * a * t * t ;
                 break;

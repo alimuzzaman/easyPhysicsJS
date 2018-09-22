@@ -4,35 +4,43 @@
 </app-canvas>
 
 <br />
-{{eqChanged | json}}
 <br />
 <br />
-<button (click)="stop()">Stop</button>
-<button (click)="start()">Start</button>
+<div class="text-center">
+  <button (click)="stop()" class="btn btn-danger" type="button">Refresh</button>&nbsp;&nbsp;
+  <button (click)="start()" class="btn btn-primary" type="button">Start</button>
+
+</div>
+
+
 
 <br />
-<br />
-<label for="">
-  Angle:
-  <input type="number" name="" id=""  [(ngModel)]= "angle">
-</label>
-<br />
-<label for="">
-  Initial Velocity:  ({{initialVelocity}})
-  <input type="number" name="" id="" (change)= "ngOnChanges('initialVelocity')"  [(ngModel)]= "initialVelocity">
-</label>
-<br />
-<label for="">
-  Time: ({{time}})
-  <input type="number" name="" id="" (change)= "ngOnChanges('time')" [(ngModel)]= "time" readonly>
-</label>
-<br />
-<label for="">
-  Acceleration: ({{acceleration}})
-  <input type="number" name="" id="" (change)= "ngOnChanges('acceleration')"  [(ngModel)]= "acceleration">
-</label>
-<br />
-<label for="">
-  Displacement: ({{displacement}})
-  <input type="number" name="" id="" (change)= "ngOnChanges('displacement')"  [(ngModel)]= "displacement">
-</label>
+
+<table class="table">
+  <tr>
+    <td><label for="">Angle:</label></td>
+    <td><input type="number" name="" id=""  [(ngModel)]= "angle"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><label for="">Initial Velocity:</label></td>
+    <td><input type="number" [(ngModel)]= "initialVelocity"></td>
+    <td><button (click)="calculateValue('initialVelocity')" class="btn btn-success">Calculate</button></td>
+  </tr>
+  <tr>
+    <td><label for="">Time:</label></td>
+    <td><input type="number" [(ngModel)]= "time"></td>
+    <td><button (click)="calculateValue('time')" class="btn btn-success">Calculate</button></td>
+  </tr>
+  <tr>
+    <td><label for="">Acceleration:</label></td>
+    <td><input type="number" [(ngModel)]= "acceleration"></td>
+    <td><button (click)="calculateValue('acceleration')" class="btn btn-success">Calculate</button></td>
+  </tr>
+  <tr>
+    <td><label for="">Displacement:</label></td>
+    <td><input type="number" [(ngModel)]= "displacement"></td>
+    <td><button (click)="calculateValue('displacement')" class="btn btn-success">Calculate</button></td>
+  </tr>
+</table>
+

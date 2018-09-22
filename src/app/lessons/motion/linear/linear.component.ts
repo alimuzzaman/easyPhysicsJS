@@ -33,7 +33,11 @@ export class MotionLinearComponent implements OnInit {
 
 
   reset(){
-    this.cssProperties.restart().reset();
+    let _this = this;
+    let url: string = this.router.url.toString();
+    this.router.navigate(['lessons.ts']).then(function(){
+      _this.router.navigate([url]);
+    });
   }
 
   ngOnInit() {
