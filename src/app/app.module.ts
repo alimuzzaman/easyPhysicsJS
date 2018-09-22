@@ -14,6 +14,7 @@ import { MotionRotaryComponent } from "./lessons/motion/rotary/rotary.component"
 import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocating/motion-reciprocating.component';
 import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
 import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
+import { FallingBodyComponent } from './lessons/gravity/falling-body/falling-body.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DisplacementComponent } from './lessons/motion/displacement/displacemen
     MotionRotaryComponent,
     MotionReciprocatingComponent,
     MotionOscillatingComponent,
-    DisplacementComponent
+    DisplacementComponent,
+    FallingBodyComponent
   ],
   imports: [
     FormsModule,

@@ -9,6 +9,7 @@ import { Lesson2Component } from './lessons/lesson2/lesson2.component';
 import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocating/motion-reciprocating.component';
 import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
 import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
+import { FallingBodyComponent } from './lessons/gravity/falling-body/falling-body.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index.ts', pathMatch: 'full' },
@@ -26,6 +27,8 @@ const routes: Routes = [
       { path: 'motion/reciprocating.ts', component: MotionReciprocatingComponent },
       { path: 'motion/oscillating.ts', component: MotionOscillatingComponent },
       { path: 'motion/displacement.ts', component: DisplacementComponent },
+
+      { path: 'gravity/falling-body.ts', component: FallingBodyComponent },
     ]
   },
 ];
