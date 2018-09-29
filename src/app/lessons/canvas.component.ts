@@ -7,7 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./canvas.component.css']
 })
 export class CanvasComponent implements OnInit {
-  @Input() canvas;
+  @Input() canvas = {
+    position: 'relative',
+    width: '600px',
+    height: '600px',
+    padding: '0px',
+  };
 
   constructor( ) {
   }

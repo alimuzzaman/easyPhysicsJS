@@ -15,6 +15,7 @@ import { MotionReciprocatingComponent } from './lessons/motion/motion-reciprocat
 import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/motion-oscillating.component';
 import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
 import { FallingBodyComponent } from './lessons/gravity/falling-body/falling-body.component';
+import { GravityComponent } from './lessons/gravity/gravity/gravity.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FallingBodyComponent } from './lessons/gravity/falling-body/falling-bod
     MotionReciprocatingComponent,
     MotionOscillatingComponent,
     DisplacementComponent,
-    FallingBodyComponent
+    FallingBodyComponent,
+    GravityComponent
   ],
   imports: [
     FormsModule,
