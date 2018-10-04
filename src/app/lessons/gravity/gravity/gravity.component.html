@@ -1,6 +1,6 @@
 <app-canvas [canvas]="canvas">
-  <img id="_football" #_football class="football state1" src="assets/football.svg">
-  <img id="football" #football class="football" src="assets/football.svg">
+  <img id="football1" #_football class="football" src="assets/football.svg" [ngStyle]='football1'>
+  <img id="football2" #football class="football" src="assets/football.svg" [ngStyle]='football2'>
 </app-canvas>
 
 <br />
@@ -12,26 +12,44 @@
 
 </div>
 
+<span>F:  {{F}}</span> <br/>
+<span>G:  {{G}}</span> <br/>
+<span>m1: {{m1}}</span> <br/>
+<span>m2: {{m2}}</span> <br/>
+<span>d:  {{d}}</span> <br/>
+<span>t:  {{t}}</span> <br/>
+<span>a1: {{a1}}</span> <br/>
+<span>a2: {{a2}}</span> <br/>
+<span>v1: {{v1}}</span> <br/>
+<span>v2: {{v2}}</span> <br/>
+
 
 
 <br />
 
-Current Velocity: {{v.currentVelocity}}
-<br />
-Time: {{time}}
 
 <table class="table">
   <tr>
-    <td><label for="">Initial Velocity:</label></td>
-    <td><input type="number" [(ngModel)]= "initialVelocity" (change)="calculateValue()"></td>
+    <td><label for="input-f">Force:</label></td>
+    <td><input id="input-f" type="number" [(ngModel)]= "F" (keyup)="calculateValue()" readonly></td>
   </tr>
   <tr>
-    <td><label for="">Acceleration(g):</label></td>
-    <td><input type="number" [(ngModel)]= "acceleration" (change)="calculateValue()"></td>
+    <td><label for="input-g">G:</label></td>
+    <td><input id="input-g" type="number" [(ngModel)]= "G" (keyup)="calculateValue()" readonly></td>
   </tr>
   <tr>
-    <td><label for="">Displacement:</label></td>
-    <td><input type="number" [(ngModel)]= "displacement" (change)="displaceBalls()"></td>
+    <td><label for="input-m1">Mass 1:</label></td>
+    <td><input id="input-m1" type="number" [(ngModel)]= "m1" (keyup)="calculateValue()"></td>
   </tr>
+  <tr>
+    <td><label for="input-m2">Mass 2:</label></td>
+    <td><input id="input-m2" type="number" [(ngModel)]= "m2" (keyup)="calculateValue()"></td>
+  </tr>
+  <tr>
+    <td><label for="input-d">Distance:</label></td>
+    <td><input id="input-d" type="number" [(ngModel)]= "d" (keyup)="calculateValue()"></td>
+  </tr>
+  
+
 </table>
 
