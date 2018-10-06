@@ -106,6 +106,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lessons_lesson2_lesson2_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./lessons/lesson2/lesson2.component */ "./src/app/lessons/lesson2/lesson2.component.ts");
 /* harmony import */ var _lessons_motion_motion_reciprocating_motion_reciprocating_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./lessons/motion/motion-reciprocating/motion-reciprocating.component */ "./src/app/lessons/motion/motion-reciprocating/motion-reciprocating.component.ts");
 /* harmony import */ var _lessons_motion_motion_oscillating_motion_oscillating_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./lessons/motion/motion-oscillating/motion-oscillating.component */ "./src/app/lessons/motion/motion-oscillating/motion-oscillating.component.ts");
+/* harmony import */ var _lessons_motion_displacement_displacement_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./lessons/motion/displacement/displacement.component */ "./src/app/lessons/motion/displacement/displacement.component.ts");
+/* harmony import */ var _lessons_gravity_falling_body_falling_body_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lessons/gravity/falling-body/falling-body.component */ "./src/app/lessons/gravity/falling-body/falling-body.component.ts");
+/* harmony import */ var _lessons_gravity_gravity_gravity_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lessons/gravity/gravity/gravity.component */ "./src/app/lessons/gravity/gravity/gravity.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -122,11 +125,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var routes = [
     { path: '', redirectTo: '/index.ts', pathMatch: 'full' },
     { path: 'index.ts', component: _home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
     { path: 'about.ts', component: _about_about_component__WEBPACK_IMPORTED_MODULE_3__["AboutComponent"] },
     { path: 'lessons.ts', component: _lessons_lessons_component__WEBPACK_IMPORTED_MODULE_4__["LessonsComponent"] },
+    { path: 'lesson/lesson2.ts', component: _lessons_lesson2_lesson2_component__WEBPACK_IMPORTED_MODULE_7__["Lesson2Component"] },
     {
         path: 'lesson',
         component: _lessons_lessons_component__WEBPACK_IMPORTED_MODULE_4__["LessonsComponent"],
@@ -135,8 +142,10 @@ var routes = [
             { path: 'motion/linear.ts', component: _lessons_motion_linear_linear_component__WEBPACK_IMPORTED_MODULE_5__["MotionLinearComponent"] },
             { path: 'motion/rotary.ts', component: _lessons_motion_rotary_rotary_component__WEBPACK_IMPORTED_MODULE_6__["MotionRotaryComponent"] },
             { path: 'motion/reciprocating.ts', component: _lessons_motion_motion_reciprocating_motion_reciprocating_component__WEBPACK_IMPORTED_MODULE_8__["MotionReciprocatingComponent"] },
-            { path: 'motion/lesson2.ts', component: _lessons_lesson2_lesson2_component__WEBPACK_IMPORTED_MODULE_7__["Lesson2Component"] },
             { path: 'motion/oscillating.ts', component: _lessons_motion_motion_oscillating_motion_oscillating_component__WEBPACK_IMPORTED_MODULE_9__["MotionOscillatingComponent"] },
+            { path: 'motion/displacement.ts', component: _lessons_motion_displacement_displacement_component__WEBPACK_IMPORTED_MODULE_10__["DisplacementComponent"] },
+            { path: 'gravity/gravity.ts', component: _lessons_gravity_gravity_gravity_component__WEBPACK_IMPORTED_MODULE_12__["GravityComponent"] },
+            { path: 'gravity/falling-body.ts', component: _lessons_gravity_falling_body_falling_body_component__WEBPACK_IMPORTED_MODULE_11__["FallingBodyComponent"] },
         ]
     },
 ];
@@ -273,12 +282,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lessons_motion_rotary_rotary_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./lessons/motion/rotary/rotary.component */ "./src/app/lessons/motion/rotary/rotary.component.ts");
 /* harmony import */ var _lessons_motion_motion_reciprocating_motion_reciprocating_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./lessons/motion/motion-reciprocating/motion-reciprocating.component */ "./src/app/lessons/motion/motion-reciprocating/motion-reciprocating.component.ts");
 /* harmony import */ var _lessons_motion_motion_oscillating_motion_oscillating_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./lessons/motion/motion-oscillating/motion-oscillating.component */ "./src/app/lessons/motion/motion-oscillating/motion-oscillating.component.ts");
+/* harmony import */ var _lessons_motion_displacement_displacement_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./lessons/motion/displacement/displacement.component */ "./src/app/lessons/motion/displacement/displacement.component.ts");
+/* harmony import */ var _lessons_gravity_falling_body_falling_body_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./lessons/gravity/falling-body/falling-body.component */ "./src/app/lessons/gravity/falling-body/falling-body.component.ts");
+/* harmony import */ var _lessons_gravity_gravity_gravity_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./lessons/gravity/gravity/gravity.component */ "./src/app/lessons/gravity/gravity/gravity.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -308,7 +323,10 @@ var AppModule = /** @class */ (function () {
                 _lessons_canvas_component__WEBPACK_IMPORTED_MODULE_10__["CanvasComponent"],
                 _lessons_motion_rotary_rotary_component__WEBPACK_IMPORTED_MODULE_11__["MotionRotaryComponent"],
                 _lessons_motion_motion_reciprocating_motion_reciprocating_component__WEBPACK_IMPORTED_MODULE_12__["MotionReciprocatingComponent"],
-                _lessons_motion_motion_oscillating_motion_oscillating_component__WEBPACK_IMPORTED_MODULE_13__["MotionOscillatingComponent"]
+                _lessons_motion_motion_oscillating_motion_oscillating_component__WEBPACK_IMPORTED_MODULE_13__["MotionOscillatingComponent"],
+                _lessons_motion_displacement_displacement_component__WEBPACK_IMPORTED_MODULE_14__["DisplacementComponent"],
+                _lessons_gravity_falling_body_falling_body_component__WEBPACK_IMPORTED_MODULE_15__["FallingBodyComponent"],
+                _lessons_gravity_gravity_gravity_component__WEBPACK_IMPORTED_MODULE_16__["GravityComponent"]
             ],
             imports: [
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
@@ -407,7 +425,7 @@ module.exports = "#canvas{\r\n    position: relative;\r\n}\r\n\r\n.boxed{\r\n   
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"canvas\" class=\"boxed container\" [ngStyle]=\"canvas\">\r\n\r\n\r\n  <div class=\"hr-text top\" [attr.data-content]=\"canvas.width\"></div>\r\n  <div class=\"hr-text left\" [attr.data-content]=\"canvas.height\"></div>\r\n  <div class=\"hr-text bottom\" [attr.data-content]=\"canvas.width\"></div>\r\n  <div class=\"hr-text right\" [attr.data-content]=\"canvas.height\"></div>\r\n\r\n  <div class=\"hr-text x x-left\" [attr.data-content]=\"'-X'\"></div>\r\n  <div class=\"hr-text x x-right\" [attr.data-content]=\"'X'\"></div>\r\n  <div class=\"hr-text y y-top\" [attr.data-content]=\"'Y'\"></div>\r\n  <div class=\"hr-text y y-bottom\" [attr.data-content]=\"'-Y'\"></div>\r\n\r\n\r\n  <ng-content></ng-content>  \r\n</div>"
+module.exports = "<div id=\"canvas\" class=\"boxed container\" [ngStyle]=\"canvas\">\r\n\r\n\r\n  <div class=\"hr-text top\" [attr.data-content]=\"canvas._width\"></div>\r\n  <div class=\"hr-text left\" [attr.data-content]=\"canvas._height\"></div>\r\n  <div class=\"hr-text bottom\" [attr.data-content]=\"canvas._width\"></div>\r\n  <div class=\"hr-text right\" [attr.data-content]=\"canvas._height\"></div>\r\n\r\n  <div class=\"hr-text x x-left\" [attr.data-content]=\"'-X'\"></div>\r\n  <div class=\"hr-text x x-right\" [attr.data-content]=\"'X'\"></div>\r\n  <div class=\"hr-text y y-top\" [attr.data-content]=\"'Y'\"></div>\r\n  <div class=\"hr-text y y-bottom\" [attr.data-content]=\"'-Y'\"></div>\r\n\r\n\r\n  <ng-content></ng-content>  \r\n</div>"
 
 /***/ }),
 
@@ -434,6 +452,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var CanvasComponent = /** @class */ (function () {
     function CanvasComponent() {
+        this.canvas = {
+            position: 'relative',
+            width: '600px',
+            height: '600px',
+            padding: '0px',
+        };
     }
     CanvasComponent.prototype.ngOnInit = function () {
     };
@@ -451,6 +475,342 @@ var CanvasComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CanvasComponent);
     return CanvasComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/falling-body/falling-body.component.css":
+/*!*************************************************************************!*\
+  !*** ./src/app/lessons/gravity/falling-body/falling-body.component.css ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".football{\r\n    position: absolute;\r\n    top: 300px;\r\n    left: 300px;\r\n    width: 64px;\r\n    height: 64px;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n  }\r\n\r\n.football.state1{\r\n    opacity: 0.5;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/falling-body/falling-body.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/app/lessons/gravity/falling-body/falling-body.component.html ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-canvas [canvas]=\"canvas\">\n  <img id=\"_football\" #_football class=\"football state1\" src=\"assets/football.svg\">\n  <img id=\"football\" #football class=\"football\" src=\"assets/football.svg\">\n</app-canvas>\n\n<br />\n<br />\n<br />\n<div class=\"text-center\">\n  <button (click)=\"stop()\" class=\"btn btn-danger\" type=\"button\">Refresh</button>&nbsp;&nbsp;\n  <button (click)=\"start()\" class=\"btn btn-primary\" type=\"button\">Start</button>\n\n</div>\n\n\n\n<br />\n\nCurrent Velocity: {{v.currentVelocity}}\n<br />\nTime: {{time}}\n\n<table class=\"table\">\n  <tr>\n    <td><label for=\"\">Initial Velocity:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"initialVelocity\" (change)=\"calculateValue()\"></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Acceleration(g):</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"acceleration\" (change)=\"calculateValue()\"></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Displacement:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"displacement\" (change)=\"displaceBalls()\"></td>\n  </tr>\n</table>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/falling-body/falling-body.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/app/lessons/gravity/falling-body/falling-body.component.ts ***!
+  \************************************************************************/
+/*! exports provided: FallingBodyComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FallingBodyComponent", function() { return FallingBodyComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/anime.min.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animejs__WEBPACK_IMPORTED_MODULE_2__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var FallingBodyComponent = /** @class */ (function () {
+    function FallingBodyComponent(activatedRoute, router) {
+        this.activatedRoute = activatedRoute;
+        this.router = router;
+        this.canvas = {
+            position: 'relative',
+            width: '600px',
+            height: '600px',
+            padding: '0px',
+        };
+        this.initialLoc = { x: 300, y: 300 };
+        this.eqChanged = [];
+        this.angle = -90;
+        this.initialVelocity = 0;
+        this.time = 7.824607964359515;
+        this.acceleration = 9.8;
+        this.displacement = 300;
+        this.v = { currentVelocity: 0 };
+        this.timer = 0;
+        this.timePrev = 0;
+        this.timeEleps = 0;
+    }
+    FallingBodyComponent.prototype.stop = function () {
+        var _this = this;
+        var url = this.router.url.toString();
+        this.router.navigate(['lessons.ts']).then(function () {
+            _this.router.navigate([url]);
+        });
+    };
+    FallingBodyComponent.prototype.displaceBalls = function () {
+        this.calculateValue();
+        this.initialLoc.y = 600 - this.displacement;
+        this.football.nativeElement.style.top = (600 - this.displacement) + 'px';
+        this._football.nativeElement.style.top = (600 - this.displacement) + 'px';
+    };
+    FallingBodyComponent.prototype.start = function () {
+        var _this_1 = this;
+        this.displaceBalls();
+        animejs__WEBPACK_IMPORTED_MODULE_2___default.a.easings['myCustomEasingName'] = function (_t, x, y, z) {
+            var r = _this_1.angle, u = _this_1.initialVelocity, t = _this_1.time, a = _this_1.acceleration, s = _this_1.displacement;
+            var relativeTime = t * _t;
+            _this_1.v.currentVelocity = u + a * _t * t;
+            return (u * relativeTime + 0.5 * a * relativeTime * relativeTime) / s;
+        };
+        var rad = this.angle * Math.PI / 180;
+        var X = Math.cos(rad) * this.displacement + 0;
+        var Y = Math.sin(rad) * this.displacement + 0;
+        this.cssProperties = animejs__WEBPACK_IMPORTED_MODULE_2___default()({
+            targets: '#football',
+            left: Math.cos(-this.angle * Math.PI / 180) * this.displacement + this.initialLoc.x,
+            top: Math.sin(-this.angle * Math.PI / 180) * this.displacement + this.initialLoc.y,
+            easing: 'myCustomEasingName',
+            duration: this.time * 1000,
+        });
+    };
+    FallingBodyComponent.prototype.calculateValue = function (removed) {
+        removed = removed || 'time';
+        var u = this.initialVelocity, t = this.time, a = this.acceleration, s = this.displacement;
+        switch (removed) {
+            case 'time':
+                //   t = ?
+                this.time = (-u + Math.sqrt(u * u + 2 * a * s)) / a;
+                break;
+            case 'initialVelocity':
+                // u = ?
+                this.initialVelocity = s / t - 0.5 * a * t;
+                break;
+            case 'acceleration':
+                //   a = ?
+                this.acceleration = 2 * s / (t * t) - 2 * u / t;
+                break;
+            case 'displacement':
+                //   s = ?
+                this.displacement = u * t + 0.5 * a * t * t;
+                break;
+            default:
+                break;
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('matterCanvas'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], FallingBodyComponent.prototype, "matterCanvas", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('football'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], FallingBodyComponent.prototype, "football", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('_football'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], FallingBodyComponent.prototype, "_football", void 0);
+    FallingBodyComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-falling-body',
+            template: __webpack_require__(/*! ./falling-body.component.html */ "./src/app/lessons/gravity/falling-body/falling-body.component.html"),
+            styles: [__webpack_require__(/*! ./falling-body.component.css */ "./src/app/lessons/gravity/falling-body/falling-body.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], FallingBodyComponent);
+    return FallingBodyComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/gravity/gravity.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/lessons/gravity/gravity/gravity.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".football {\r\n    position: absolute;\r\n    top: 300px;\r\n    left: 300px;\r\n    width: 64px;\r\n    height: 64px;\r\n    -webkit-transform: translateY(-50%);\r\n            transform: translateY(-50%);\r\n}\r\n\r\n#football2{\r\n    /* transform: translate(50%, -50%); */\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/gravity/gravity.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/lessons/gravity/gravity/gravity.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-canvas [canvas]=\"canvas\">\n  <img id=\"football1\" #_football class=\"football\" src=\"assets/football.svg\" [ngStyle]='football1'>\n  <img id=\"football2\" #football class=\"football\" src=\"assets/football.svg\" [ngStyle]='football2'>\n</app-canvas>\n\n<br />\n<br />\n<br />\n<div class=\"text-center\">\n  <button (click)=\"stop()\" class=\"btn btn-danger\" type=\"button\">Refresh</button>&nbsp;&nbsp;\n  <button (click)=\"start()\" class=\"btn btn-primary\" type=\"button\">Start</button>\n\n</div>\n\n<span>F:  {{F}}</span> <br/>\n<span>G:  {{G}}</span> <br/>\n<span>m1: {{m1}}</span> <br/>\n<span>m2: {{m2}}</span> <br/>\n<span>d:  {{d}}</span> <br/>\n<span>t:  {{t}}</span> <br/>\n<span>a1: {{a1}}</span> <br/>\n<span>a2: {{a2}}</span> <br/>\n<span>v1: {{v1}}</span> <br/>\n<span>v2: {{v2}}</span> <br/>\n\n\n\n<br />\n\n\n<table class=\"table\">\n  <tr>\n    <td><label for=\"input-f\">Force:</label></td>\n    <td><input id=\"input-f\" type=\"number\" [(ngModel)]= \"F\" (keyup)=\"calculateValue()\" readonly></td>\n  </tr>\n  <tr>\n    <td><label for=\"input-g\">G:</label></td>\n    <td><input id=\"input-g\" type=\"number\" [(ngModel)]= \"G\" (keyup)=\"calculateValue()\" readonly></td>\n  </tr>\n  <tr>\n    <td><label for=\"input-m1\">Mass 1:</label></td>\n    <td><input id=\"input-m1\" type=\"number\" [(ngModel)]= \"m1\" (keyup)=\"calculateValue()\"></td>\n  </tr>\n  <tr>\n    <td><label for=\"input-m2\">Mass 2:</label></td>\n    <td><input id=\"input-m2\" type=\"number\" [(ngModel)]= \"m2\" (keyup)=\"calculateValue()\"></td>\n  </tr>\n  <tr>\n    <td><label for=\"input-d\">Distance:</label></td>\n    <td><input id=\"input-d\" type=\"number\" [(ngModel)]= \"d\" (keyup)=\"calculateValue()\"></td>\n  </tr>\n  \n\n</table>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/lessons/gravity/gravity/gravity.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/lessons/gravity/gravity/gravity.component.ts ***!
+  \**************************************************************/
+/*! exports provided: GravityComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GravityComponent", function() { return GravityComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/anime.min.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animejs__WEBPACK_IMPORTED_MODULE_2__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var GravityComponent = /** @class */ (function () {
+    function GravityComponent(activatedRoute, router) {
+        this.activatedRoute = activatedRoute;
+        this.router = router;
+        /**
+         * No of frame per second.
+         */
+        this.fps = 60;
+        /**
+         * Force at witch m1 and m2 are pulled.
+         */
+        this.F = 0;
+        this.G = 6.673 * Math.pow(10, -11);
+        this.m1 = 99e15;
+        this.m2 = 99e15;
+        this.d = 1000;
+        this.t = 0;
+        this.a1 = 0;
+        this.a2 = 0;
+        this.v1 = 0;
+        this.v2 = 0;
+        this.canvas = {
+            position: 'relative',
+            width: '600px',
+            _width: 600,
+            height: '600px',
+            _height: 600,
+            padding: '0px',
+        };
+        this.football1 = {
+            left: '-32px',
+        };
+        this.football2 = {
+            left: '568px',
+        };
+    }
+    GravityComponent.prototype.ngOnInit = function () {
+        this.calculateValue();
+    };
+    GravityComponent.prototype.stop = function () {
+        var _this = this;
+        var url = this.router.url.toString();
+        this.router.navigate(['lessons.ts']).then(function () {
+            _this.router.navigate([url]);
+        });
+    };
+    GravityComponent.prototype.start = function () {
+        var _this_1 = this;
+        var F = this.F;
+        var G = this.G;
+        var m1 = this.m1;
+        var m2 = this.m2;
+        var d = this.d;
+        var t = this.t;
+        var a1 = this.a1;
+        var a2 = this.a2;
+        var v1 = this.v1;
+        var v2 = this.v2;
+        var pos1;
+        var pos2;
+        var startTime = Date.now();
+        this.calculateValue();
+        /**
+         * Animation loop
+         */
+        var timer = setInterval(function () {
+            var timeElapsed = (Date.now() - startTime) / 1000;
+            if (timeElapsed >= _this_1.t || (pos1 + 60) >= (pos2)) {
+                clearInterval(timer);
+            }
+            pos1 = 0.5 * a1 * timeElapsed * timeElapsed * 568 / d - 32;
+            pos2 = (600 - 0.5 * a2 * timeElapsed * timeElapsed * 568 / d) - 32;
+            _this_1.football1.left = pos1 + 'px';
+            _this_1.football2.left = pos2 + 'px';
+        }, 1000 / this.fps);
+        return;
+        this.football1.left = '0px';
+        // this.football2.right = '0px';
+        this.calculateValue();
+        animejs__WEBPACK_IMPORTED_MODULE_2___default.a.easings['easing1'] = function (_t) {
+            var relativeTime = _this_1.t * _t;
+            return (0.5 * _this_1.a1 * relativeTime * relativeTime) / _this_1.d;
+        };
+        animejs__WEBPACK_IMPORTED_MODULE_2___default()({
+            targets: '#football1',
+            left: 0.5 * this.a1 * this.t * this.t,
+            easing: 'easing1',
+            duration: this.t * 1000,
+        });
+        animejs__WEBPACK_IMPORTED_MODULE_2___default.a.easings['easing2'] = function (_t) {
+            var relativeTime = _this_1.t * _t;
+            return (0.5 * _this_1.a2 * relativeTime * relativeTime) / _this_1.d;
+        };
+        animejs__WEBPACK_IMPORTED_MODULE_2___default()({
+            targets: '#football2',
+            right: 0.5 * this.a2 * this.t * this.t,
+            easing: 'easing2',
+            duration: this.t * 1000,
+        });
+    };
+    GravityComponent.prototype.calculateValue = function (removed) {
+        this.canvas._width = this.d;
+        this.F = (this.G * this.m1 * this.m2) / (this.d * this.d);
+        this.a1 = this.F / this.m1;
+        this.a2 = this.F / this.m2;
+        this.t = Math.sqrt(2 * this.d / (this.a1 + this.a2));
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('matterCanvas'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], GravityComponent.prototype, "matterCanvas", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('football1'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], GravityComponent.prototype, "Efootball1", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('football2'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], GravityComponent.prototype, "Efootball2", void 0);
+    GravityComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-gravity',
+            template: __webpack_require__(/*! ./gravity.component.html */ "./src/app/lessons/gravity/gravity/gravity.component.html"),
+            styles: [__webpack_require__(/*! ./gravity.component.css */ "./src/app/lessons/gravity/gravity/gravity.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], GravityComponent);
+    return GravityComponent;
 }());
 
 
@@ -575,7 +935,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"lessons col-3\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item\">\n          Lesson 1\n          <ul class=\"list-group\">\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/linear.ts\">Linear Motion</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/rotary.ts\">Circle Motion</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/reciprocating.ts\">Reciprocating Motion</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/oscillating.ts\">Oscillating Motion</a></li>\n          </ul>\n          \n        </li>\n        <li class=\"list-group-item\"><a routerLink=\"/lesson/lesson2.ts\">Lesson 2</a></li>\n      </ul>\n    </div>\n    <div class=\"details col\">\n      Lesson details\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"lessons col-3\">\n      <ul class=\"list-group\">\n        <li class=\"list-group-item\">\n          Motion\n          <ul class=\"list-group\">\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/linear.ts\">Linear Motion</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/rotary.ts\">Circle Motion</a></li>\n            <!-- <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/reciprocating.ts\">Reciprocating Motion</a></li> -->\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/oscillating.ts\">Oscillating Motion</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/motion/displacement.ts\">Displacement Motion</a></li>\n          </ul>\n          \n        </li>\n        <li class=\"list-group-item\">\n          Gravity\n          <ul class=\"list-group\">\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/gravity/gravity.ts\">Gravity</a></li>\n            <li class=\"list-group-item\"><a routerLink=\"/lesson/gravity/falling-body.ts\">Falling Body</a></li>\n          </ul>\n        </li>\n      </ul>\n    </div>\n    <div class=\"details col\">\n      Lesson details\n      <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -614,6 +974,143 @@ var LessonsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], LessonsComponent);
     return LessonsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/lessons/motion/displacement/displacement.component.css":
+/*!************************************************************************!*\
+  !*** ./src/app/lessons/motion/displacement/displacement.component.css ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".football{\r\n    position: absolute;\r\n    top: 300px;\r\n    left: 300px;\r\n    width: 64px;\r\n    height: 64px;\r\n    -webkit-transform: translate(-50%, -50%);\r\n            transform: translate(-50%, -50%);\r\n  }\r\n\r\n.football.state1{\r\n    opacity: 0.5;\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/lessons/motion/displacement/displacement.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/app/lessons/motion/displacement/displacement.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-canvas [canvas]=\"canvas\">\n  <img id=\"_football\" class=\"football state1\" src=\"assets/football.svg\">\n  <img id=\"football\" class=\"football\" src=\"assets/football.svg\">\n</app-canvas>\n\n<br />\n<br />\n<br />\n<div class=\"text-center\">\n  <button (click)=\"stop()\" class=\"btn btn-danger\" type=\"button\">Refresh</button>&nbsp;&nbsp;\n  <button (click)=\"start()\" class=\"btn btn-primary\" type=\"button\">Start</button>\n\n</div>\n\n\n\n<br />\n\n<table class=\"table\">\n  <tr>\n    <td><label for=\"\">Angle:</label></td>\n    <td><input type=\"number\" name=\"\" id=\"\"  [(ngModel)]= \"angle\"></td>\n    <td></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Initial Velocity:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"initialVelocity\"></td>\n    <td><button (click)=\"calculateValue('initialVelocity')\" class=\"btn btn-success\">Calculate</button></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Time:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"time\"></td>\n    <td><button (click)=\"calculateValue('time')\" class=\"btn btn-success\">Calculate</button></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Acceleration:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"acceleration\"></td>\n    <td><button (click)=\"calculateValue('acceleration')\" class=\"btn btn-success\">Calculate</button></td>\n  </tr>\n  <tr>\n    <td><label for=\"\">Displacement:</label></td>\n    <td><input type=\"number\" [(ngModel)]= \"displacement\"></td>\n    <td><button (click)=\"calculateValue('displacement')\" class=\"btn btn-success\">Calculate</button></td>\n  </tr>\n</table>\n\n"
+
+/***/ }),
+
+/***/ "./src/app/lessons/motion/displacement/displacement.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/app/lessons/motion/displacement/displacement.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: DisplacementComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DisplacementComponent", function() { return DisplacementComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animejs */ "./node_modules/animejs/anime.min.js");
+/* harmony import */ var animejs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(animejs__WEBPACK_IMPORTED_MODULE_2__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DisplacementComponent = /** @class */ (function () {
+    function DisplacementComponent(activatedRoute, router) {
+        this.activatedRoute = activatedRoute;
+        this.router = router;
+        this.canvas = {
+            position: 'relative',
+            width: '600px',
+            height: '600px',
+            padding: '0px',
+        };
+        this.eqChanged = [];
+        this.angle = 0;
+        this.initialVelocity = 0;
+        this.time = 5.477225575051661;
+        this.acceleration = 20;
+        this.displacement = 300;
+        this.v = {};
+        this.timer = 0;
+        this.timePrev = 0;
+        this.timeEleps = 0;
+    }
+    DisplacementComponent.prototype.stop = function () {
+        var _this = this;
+        var url = this.router.url.toString();
+        this.router.navigate(['lessons.ts']).then(function () {
+            _this.router.navigate([url]);
+        });
+    };
+    DisplacementComponent.prototype.start = function () {
+        var _this_1 = this;
+        animejs__WEBPACK_IMPORTED_MODULE_2___default.a.easings['myCustomEasingName'] = function (_t, x, y, z) {
+            var r = _this_1.angle, u = _this_1.initialVelocity, t = _this_1.time, a = _this_1.acceleration, s = _this_1.displacement;
+            var relativeTime = t * _t;
+            console.log(_t, x, y, z);
+            return (u * relativeTime + 0.5 * a * relativeTime * relativeTime) / s;
+        };
+        var rad = this.angle * Math.PI / 180;
+        var X = Math.cos(rad) * this.displacement + 0;
+        var Y = Math.sin(rad) * this.displacement + 0;
+        this.cssProperties = animejs__WEBPACK_IMPORTED_MODULE_2___default()({
+            targets: '#football',
+            left: Math.cos(-this.angle * Math.PI / 180) * this.displacement + 300,
+            top: Math.sin(-this.angle * Math.PI / 180) * this.displacement + 300,
+            easing: 'myCustomEasingName',
+            duration: this.time * 1000,
+        });
+    };
+    DisplacementComponent.prototype.calculateValue = function (removed) {
+        var u = this.initialVelocity, t = this.time, a = this.acceleration, s = this.displacement;
+        switch (removed) {
+            case 'time':
+                //   t = ?
+                this.time = (-u + Math.sqrt(u * u + 2 * a * s)) / a;
+                break;
+            case 'initialVelocity':
+                // u = ?
+                this.initialVelocity = s / t - 0.5 * a * t;
+                break;
+            case 'acceleration':
+                //   a = ?
+                this.acceleration = 2 * s / (t * t) - 2 * u / t;
+                break;
+            case 'displacement':
+                //   s = ?
+                this.displacement = u * t + 0.5 * a * t * t;
+                break;
+            default:
+                break;
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('matterCanvas'),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"])
+    ], DisplacementComponent.prototype, "matterCanvas", void 0);
+    DisplacementComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-displacement',
+            template: __webpack_require__(/*! ./displacement.component.html */ "./src/app/lessons/motion/displacement/displacement.component.html"),
+            styles: [__webpack_require__(/*! ./displacement.component.css */ "./src/app/lessons/motion/displacement/displacement.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], DisplacementComponent);
+    return DisplacementComponent;
 }());
 
 
@@ -691,7 +1188,11 @@ var MotionLinearComponent = /** @class */ (function () {
         });
     };
     MotionLinearComponent.prototype.reset = function () {
-        this.cssProperties.restart().reset();
+        var _this = this;
+        var url = this.router.url.toString();
+        this.router.navigate(['lessons.ts']).then(function () {
+            _this.router.navigate([url]);
+        });
     };
     MotionLinearComponent.prototype.ngOnInit = function () {
     };
@@ -728,7 +1229,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"matter-canvas\" #matterCanvas></div>"
+module.exports = "<div id=\"matter-canvas\" #matterCanvas></div>\r\n<button (click)=\"stop()\">Stop</button>\r\n<button (click)=\"start()\">Start</button>"
 
 /***/ }),
 
@@ -760,6 +1261,12 @@ var MotionOscillatingComponent = /** @class */ (function () {
     function MotionOscillatingComponent() {
     }
     MotionOscillatingComponent.prototype.ngOnInit = function () {
+        this.xyz = this.start();
+    };
+    MotionOscillatingComponent.prototype.stop = function () {
+        this.xyz.stop();
+    };
+    MotionOscillatingComponent.prototype.start = function () {
         var Engine = matter_js__WEBPACK_IMPORTED_MODULE_1__["Engine"], Render = matter_js__WEBPACK_IMPORTED_MODULE_1__["Render"], Runner = matter_js__WEBPACK_IMPORTED_MODULE_1__["Runner"], Composites = matter_js__WEBPACK_IMPORTED_MODULE_1__["Composites"], Constraint = matter_js__WEBPACK_IMPORTED_MODULE_1__["Constraint"], MouseConstraint = matter_js__WEBPACK_IMPORTED_MODULE_1__["MouseConstraint"], Mouse = matter_js__WEBPACK_IMPORTED_MODULE_1__["Mouse"], World = matter_js__WEBPACK_IMPORTED_MODULE_1__["World"], Bodies = matter_js__WEBPACK_IMPORTED_MODULE_1__["Bodies"];
         // create engine
         var engine = Engine.create(), world = engine.world;
@@ -778,10 +1285,13 @@ var MotionOscillatingComponent = /** @class */ (function () {
         var runner = Runner.create();
         Runner.run(runner, engine);
         // add stiff global constraint
-        var body = Bodies.circle(800, 100, 25);
-        body.mass = 10;
+        var body = Bodies.circle(800, 100, 25, {
+            frictionAir: 0,
+        });
+        body.mass = 30;
         body.inverseMass = 1 / body.mass;
         var constraint = Constraint.create({
+            // stiffness: 1,
             pointA: { x: 400, y: 100 },
             bodyB: body,
         });
