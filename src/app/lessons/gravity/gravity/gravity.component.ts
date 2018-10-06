@@ -10,7 +10,10 @@ import anime from 'animejs';
     styleUrls: ['./gravity.component.css']
 })
 export class GravityComponent {
-
+    /**
+     * No of frame per second.
+     */
+    public fps:number   = 60;
     /**
      * Force at witch m1 and m2 are pulled.
      */
@@ -40,11 +43,11 @@ export class GravityComponent {
     }
 
     public football1 = {
-        left: '0px',
+        left: '-32px',
     }
     public football2 = {
-        left: 'initial',
-        right: '00px',
+        left: '568px',
+        // right: '00px',
     }
 
     constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
@@ -63,16 +66,46 @@ export class GravityComponent {
     }
 
     start() {
+        var F = this.F;
+        var G = this.G;
+        var m1 = this.m1;
+        var m2 = this.m2;
+        var d = this.d;
+        var t = this.t;
+        var a1 = this.a1;
+        var a2 = this.a2;
+        var v1 = this.v1;
+        var v2 = this.v2;
+        var pos1;
+        var pos2;
+        var startTime:number = Date.now();
+        this.calculateValue();
+
+        /**
+         * Animation loop
+         */
+        var timer = setInterval( () => {
+            var timeElapsed = (Date.now() - startTime) / 1000;
+
+            if(timeElapsed >= this.t || (pos1 + 60)>= (pos2)){
+                clearInterval(timer);
+            }
+
+            pos1 = 0.5 * a1 * timeElapsed * timeElapsed * 568 / d  - 32;
+            pos2 = (600 - 0.5 * a2 * timeElapsed * timeElapsed * 568 / d)  - 32;
+
+            this.football1.left = pos1 + 'px';
+            this.football2.left = pos2 + 'px';
+
+        }, 1000/this.fps);
 
 
 
 
 
-
-
-        // return;
+        return;
         this.football1.left = '0px';
-        this.football2.right = '0px';
+        // this.football2.right = '0px';
         this.calculateValue();
         anime.easings['easing1'] = (_t) => {
             var relativeTime = this.t * _t;
