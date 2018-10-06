@@ -33,9 +33,9 @@ export class GravityComponent {
     public canvas = {
         position: 'relative',
         width: '600px',
-        _width: '600',
+        _width: 600,
         height: '600px',
-        _height: '600',
+        _height: 600,
         padding: '0px',
     }
 
@@ -49,6 +49,10 @@ export class GravityComponent {
 
     constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
+    ngOnInit(){
+        this.calculateValue();
+
+    }
 
     stop() {
         let _this = this;
@@ -59,6 +63,14 @@ export class GravityComponent {
     }
 
     start() {
+
+
+
+
+
+
+
+        // return;
         this.football1.left = '0px';
         this.football2.right = '0px';
         this.calculateValue();
@@ -86,7 +98,7 @@ export class GravityComponent {
     }
 
     calculateValue(removed?) {
-
+        this.canvas._width = this.d;
         this.F = (this.G * this.m1 * this.m2) / (this.d * this.d);
         this.a1 = this.F / this.m1;
         this.a2 = this.F / this.m2;
