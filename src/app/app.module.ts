@@ -16,6 +16,7 @@ import { MotionOscillatingComponent } from './lessons/motion/motion-oscillating/
 import { DisplacementComponent } from './lessons/motion/displacement/displacement.component';
 import { FallingBodyComponent } from './lessons/gravity/falling-body/falling-body.component';
 import { GravityComponent } from './lessons/gravity/gravity/gravity.component';
+import { CoulombsLawComponent } from './lessons/ee/coulombs-law/coulombs-law.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GravityComponent } from './lessons/gravity/gravity/gravity.component';
     MotionOscillatingComponent,
     DisplacementComponent,
     FallingBodyComponent,
-    GravityComponent
+    GravityComponent,
+    CoulombsLawComponent
   ],
   imports: [
     FormsModule,
